@@ -10,7 +10,7 @@ function itemsLoaded(items) {
 const names = ['Max', 'Philip', 'Alex', 'Irina', 'Vovan'];
 const randomNumber = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
-const labels = ['Urgent', 'Interview'];
+const labels = ['Battersea Park', 'Regent\'s Park', 'Hyde Park', 'Chelsea Sports Centre', 'Ethos'];
 
 export function loadItems(day) {
   // Do items loading here
@@ -27,9 +27,9 @@ export function loadItems(day) {
         const numItems = randomNumber(0, 5);
         for (let j = 0; j < numItems; j += 1) {
           items[strTime].push({
-            name: `Meeting with ${names[randomNumber(0, 4)]}`,
-            time: `${randomNumber(0, 24)}:${randomNumber(0, 60)}`,
-            labels: randomNumber(0, 1) ? [labels[randomNumber(0, 1)]] : [],
+            name: `${names[randomNumber(0, 4)]}'s game`,
+            time: `${randomNumber(9, 21)}:00`,
+            labels: [labels[randomNumber(0, labels.length-1)]],
           });
         }
       }
