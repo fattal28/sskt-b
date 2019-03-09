@@ -13,7 +13,7 @@ class CalendarScreen extends React.Component {
   renderEmptyDate() {
     return (
       <View style={styles.emptyDate}>
-        <Text>This is empty date!</Text>
+        <Text>No games scheduled!</Text>
       </View>
     );
   }
