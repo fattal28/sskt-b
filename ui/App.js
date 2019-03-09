@@ -3,6 +3,7 @@ import React from 'react';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import { PersistGate } from 'redux-persist/integration/react';
 import { colors } from './src/styles';
+import { createStackNavigator, createAppContainer } from "react-navigation";
 
 import { store, persistor } from './src/redux/store';
 
@@ -23,6 +24,45 @@ export default function App() {
       </PersistGate>
     </Provider>
   );
+}
+
+const AppContainer = createAppContainer(AppNavigator);
+
+class ListGames extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <Text>List Games</Text>
+      </View>
+    );
+  }
+}
+
+class HostForm extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        <Text>Host a Game</Text>
+      </View>
+    );
+  }
+}
+
+const AppNavigator = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Games: ListGames,
+    HostForm: HostForm,
+  },
+  {
+    initialRouteName: "Home"
+  }
+);
+
+export default class App extends React.Component {
+  render() {
+    return <AppContainer />;
+  }
 }
 
 const styles = StyleSheet.create({
