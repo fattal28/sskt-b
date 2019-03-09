@@ -75,7 +75,7 @@ export default createBottomTabNavigator(
         ),
       },
     },
-    Grids: {
+    Games: {
       screen: GridsScreen,
       navigationOptions: {
         header: (
@@ -86,7 +86,7 @@ export default createBottomTabNavigator(
         ),
       },
     },
-    Pages: {
+    Profile: {
       screen: PagesScreen,
       navigationOptions: {
         header: (
@@ -97,19 +97,8 @@ export default createBottomTabNavigator(
         ),
       },
     },
-    // Components: {
-    //   screen: ComponentsScreen,
-    //   navigationOptions: {
-    //     header: (
-    //       <View style={styles.headerContainer}>
-    //         <Image style={styles.headerImage} source={hederBackground} />
-    //         <Text style={styles.headerCaption}>Components</Text>
-    //       </View>
-    //     ),
-    //   },
-    // },
     CreateGame: {
-      screen: FormData,
+      screen: ComponentsScreen,
       navigationOptions: {
         header: (
             <View style={styles.headerContainer}>
@@ -133,13 +122,13 @@ export default createBottomTabNavigator(
           case 'Calendar':
             iconSource = iconCalendar;
             break;
-          case 'Grids':
+          case 'Games':
             iconSource = iconGrids;
             break;
-          case 'Pages':
+          case 'Profile':
             iconSource = iconPages;
             break;
-          case 'Components':
+          case 'CreateGame':
             iconSource = iconComponents;
             break;
           default:
