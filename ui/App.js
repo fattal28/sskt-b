@@ -10,6 +10,9 @@ import { store, persistor } from './src/redux/store';
 import AppView from './src/modules/AppViewContainer';
 
 export default function App() {
+  render() {
+    return <AppContainer />;
+  }
   return (
     <Provider store={store}>
       <PersistGate
@@ -23,7 +26,11 @@ export default function App() {
         <AppView />
       </PersistGate>
     </Provider>
-  );
+  ); 
+}
+
+export default class App extends React.Component {
+
 }
 
 const AppContainer = createAppContainer(AppNavigator);
@@ -59,11 +66,7 @@ const AppNavigator = createStackNavigator(
   }
 );
 
-export default class App extends React.Component {
-  render() {
-    return <AppContainer />;
-  }
-}
+
 
 const styles = StyleSheet.create({
   container: {
