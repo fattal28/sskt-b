@@ -108,6 +108,17 @@ export default createBottomTabNavigator(
         ),
       },
     },
+    // CreateGame: {
+    //   screen: FormData,
+    //   navigationOptions: {
+    //     header: (
+    //         <View style={styles.headerContainer}>
+    //           <Image style={styles.headerImage} source={hederBackground} />
+    //           <Text style={styles.headerCaption}>Pages</Text>
+    //         </View>
+    //     ),
+    //   },
+    // }
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
