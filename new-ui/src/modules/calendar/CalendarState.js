@@ -24,7 +24,7 @@ export function loadItems(day) {
       const strTime = new Date(time).toISOString().split('T')[0];
       if (!items[strTime]) {
         items[strTime] = [];
-        const numItems = randomNumber(0, 5);
+        const numItems = randomNumber(0, 1);
         for (let j = 0; j < numItems; j += 1) {
           items[strTime].push({
             name: `${names[randomNumber(0, 4)]}'s game`,
