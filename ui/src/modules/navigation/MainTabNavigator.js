@@ -7,7 +7,7 @@ import { colors, fonts } from '../../styles';
 
 import HomeScreen from '../home/HomeViewContainer';
 import CalendarScreen from '../calendar/CalendarViewContainer';
-import GridsScreen from '../grids/GridsViewContainer';
+import GridsScreen from '../grids/ListGamesViewContainer';
 import PagesScreen from '../pages/PagesViewContainer';
 import ComponentsScreen from '../components/ComponentsViewContainer';
 

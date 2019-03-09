@@ -1,6 +1,6 @@
 import { compose, withState } from 'recompose';
 
-import GridView from './GridsView';
+import ListGamesView from './ListGames';
 
 const listData = [
   {
@@ -130,4 +130,4 @@ export default compose(
   withState('tabIndex', 'setTabIndex', 0),
   withState('tabs', 'setTabs', ['Grid', 'List 1', 'List 2']),
   withState('data', 'setData', listData),
-)(GridView);
+)(ListGamesView);

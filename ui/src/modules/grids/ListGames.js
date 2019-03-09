@@ -68,6 +68,7 @@ export default class GridsScreen extends React.Component {
         <Image style={styles.itemTwoImage} source={{ uri: item.image }} />
         <View style={styles.itemTwoOverlay} />
         <Text style={styles.itemTwoTitle}>{item.title}</Text>
+        <Text style={styles.itemTwoTitle}>{item.title}</Text>
         <Text style={styles.itemTwoSubTitle}>{item.subtitle}</Text>
         <Text style={styles.itemTwoPrice}>{item.price}</Text>
       </View>
