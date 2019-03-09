@@ -94,7 +94,7 @@ export default class App extends Component {
         fullName: null,
         lastName: null,
         date: null,
-        PostCode: null,
+        confirm: null,
       },
       isFormValid: false,
       validateType: 'onFocus',
@@ -102,30 +102,30 @@ export default class App extends Component {
   }
   render() {
     return (
-      <View style={styles.container}>
-        <Text>This is a example of react-cross-form</Text>
-        <Card>
-          <DocForm
-            fields={FORM_FIELDS}
-            data={this.state.form}
-            onChange={({ key, updateData }) => {
-              this.setState({ form: updateData });
-              if (key === 'lastName') {
-                this.setState({ validateType: 'all' });
-              }
-            }}
-            validateType={this.state.validateType}
-            onValidateStateChanged={({ isValid }) => {
-              this.setState({ isFormValid: isValid });
-            }}
-          />
-          <Button
-            disabled={!this.state.isFormValid}
-            title={'Submit'}
-            onPress={() => alert(JSON.stringify(this.state.form))}
-          />
-        </Card>
-      </View>
+        <View style={styles.container}>
+          <Text>This is a example of react-cross-form</Text>
+          <Card>
+            <DocForm
+                fields={FORM_FIELDS}
+                data={this.state.form}
+                onChange={({ key, updateData }) => {
+                  this.setState({ form: updateData });
+                  if (key === 'lastName') {
+                    this.setState({ validateType: 'all' });
+                  }
+                }}
+                validateType={this.state.validateType}
+                onValidateStateChanged={({ isValid }) => {
+                  this.setState({ isFormValid: isValid });
+                }}
+            />
+            <Button
+                disabled={!this.state.isFormValid}
+                title={'Submit'}
+                onPress={() => alert(JSON.stringify(this.state.form))}
+            />
+          </Card>
+        </View>
     );
   }
 }
