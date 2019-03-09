@@ -72,6 +72,6 @@ const listData = [
 
 export default compose(
   withState('tabIndex', 'setTabIndex', 0),
-  withState('tabs', 'setTabs', ['Grid', 'List 1', 'List 2']),
+  withState('tabs', 'setTabs', ['All', 'Hosted', 'Open']),
   withState('data', 'setData', listData),
 )(GridView);

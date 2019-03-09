@@ -97,28 +97,28 @@ export default createBottomTabNavigator(
         ),
       },
     },
-    Components: {
-      screen: ComponentsScreen,
-      navigationOptions: {
-        header: (
-          <View style={styles.headerContainer}>
-            <Image style={styles.headerImage} source={hederBackground} />
-            <Text style={styles.headerCaption}>Components</Text>
-          </View>
-        ),
-      },
-    },
-    // CreateGame: {
-    //   screen: FormData,
+    // Components: {
+    //   screen: ComponentsScreen,
     //   navigationOptions: {
     //     header: (
-    //         <View style={styles.headerContainer}>
-    //           <Image style={styles.headerImage} source={hederBackground} />
-    //           <Text style={styles.headerCaption}>Pages</Text>
-    //         </View>
+    //       <View style={styles.headerContainer}>
+    //         <Image style={styles.headerImage} source={hederBackground} />
+    //         <Text style={styles.headerCaption}>Components</Text>
+    //       </View>
     //     ),
     //   },
-    // }
+    // },
+    CreateGame: {
+      screen: FormData,
+      navigationOptions: {
+        header: (
+            <View style={styles.headerContainer}>
+              <Image style={styles.headerImage} source={hederBackground} />
+              <Text style={styles.headerCaption}>Pages</Text>
+            </View>
+        ),
+      },
+    }
   },
   {
     defaultNavigationOptions: ({ navigation }) => ({
