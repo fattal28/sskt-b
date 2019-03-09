@@ -12,7 +12,7 @@ Hack a Project
 git clone https://github.com/fattal28/sskt-b.git
 ```
 
-```
+```bash
 # Install dependencies
 yarn add react-navigation
 # or with npm
